@@ -42,7 +42,7 @@ export function OverviewSection() {
               </p>
             </div>
             <p className="max-w-2xl leading-relaxed text-muted-foreground">
-              I’m the person who shows up early, stays late, and builds the thing nobody explicitly requested, but everyone ends up relying on. My resume explains <span className="italic">what</span> I’ve shipped. This page shows you <span className="font-medium text-foreground">who I am while shipping</span>, the engineer who jumps into debugging threads uninvited, prototypes dashboards on weekends because the data deserved better, and takes responsibility for making sure the people around me don’t feel stuck.
+              I tend to build the things that aren’t on the roadmap yet, but quickly become necessary. My resume explains <span className="italic">what</span> I’ve shipped. This page shows you <span className="font-medium text-foreground">how I operate while shipping</span> — stepping into debugging threads early, improving systems that create friction, and making sure both people and infrastructure move forward.
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
