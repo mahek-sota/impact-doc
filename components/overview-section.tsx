@@ -42,7 +42,7 @@ export function OverviewSection() {
               </p>
             </div>
             <p className="max-w-2xl leading-relaxed text-muted-foreground">
-              I tend to build the things that aren’t on the roadmap yet, but quickly become necessary. My resume explains <span className="italic">what</span> I’ve shipped. This page shows you <span className="font-medium text-foreground">how I operate while shipping</span> — stepping into debugging threads early, improving systems that create friction, and making sure both people and infrastructure move forward.
+              I tend to build the things that aren’t on the roadmap yet, but quickly become necessary. My resume explains <span className="italic">what</span> I’ve shipped. This page shows you <span className="font-medium text-foreground">how I operate while shipping</span>, stepping into debugging threads early, improving systems that create friction, and making sure both people and infrastructure move forward.
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
