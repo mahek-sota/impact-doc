@@ -5,25 +5,25 @@ const stories = [
     icon: Users,
     label: "20+ Workshops",
     title: "Between the sessions",
-    body: "I volunteered to help during workshops and started walking between rows to check in on people who were stuck but hesitant to ask. Over time, it became instinct — fixing environment issues, untangling logic, or clarifying concepts in real time. The goal was simple: make sure no one left blocked.",
+    body: "I volunteered to help during workshops and started walking between rows to check in on people who were stuck but hesitant to ask. Over time, it became instinct, fixing environment issues, untangling logic, or clarifying concepts in real time. The goal was simple: make sure no one left blocked.",
   },
   {
     icon: Compass,
     label: "Tech Navigator",
     title: "\"Hey, can you help me with this?\"",
-    body: "Colleagues often reached out when they were new to something — Linux, Git, web development, or command-line tools. I’d sit with them and walk through it step by step until it felt manageable. Not doing it for them, just helping them build confidence using it.",
+    body: "Colleagues often reached out when they were new to something, Linux, Git, web development, or command-line tools. I’d sit with them and walk through it step by step until it felt manageable. Not doing it for them, just helping them build confidence using it.",
   },
   {
     icon: Wrench,
     label: "Automation",
     title: "\"This shouldn’t be manual\"",
-    body: "When I noticed repetitive tasks taking significant time, I built scripts or small tools to automate them. Setup helpers, workflow scripts, lightweight pipelines — practical solutions that reduced manual effort and let people focus on higher-value work.",
+    body: "When I noticed repetitive tasks taking significant time, I built scripts or small tools to automate them. Setup helpers, workflow scripts, lightweight pipelines, practical solutions that reduced manual effort and let people focus on higher-value work.",
   },
   {
     icon: MessageSquare,
     label: "Peer Mentor",
     title: "Learning together",
-    body: "During internships, when teammates ran into unfamiliar patterns or difficult errors, I’d debug alongside them or share clearer resources. It wasn’t formal mentorship — just making sure progress didn’t stall.",
+    body: "During internships, when teammates ran into unfamiliar patterns or difficult errors, I’d debug alongside them or share clearer resources. It wasn’t formal mentorship, just making sure progress didn’t stall.",
   },
 ]
 
