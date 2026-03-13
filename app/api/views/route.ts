@@ -5,9 +5,7 @@ const redis = Redis.fromEnv()
 
 export async function GET() {
   const totalViews = (await redis.get<number>("views:total")) ?? 0
-  const log = (await redis.lrange<string>("views:log", 0, -1)).map((entry) =>
-    JSON.parse(entry)
-  )
+  const log = await redis.lrange("views:log", 0, -1)
   return NextResponse.json({ totalViews, log })
 }
 
@@ -18,8 +16,7 @@ export async function POST(req: NextRequest) {
   const city = req.headers.get("x-vercel-ip-city") ?? "Unknown"
   const timestamp = new Date().toISOString()
 
-  const entry = JSON.stringify({ timestamp, referrer, city, country })
-  await redis.lpush("views:log", entry)
+  await redis.lpush("views:log", { timestamp, referrer, city, country })
 
   const totalViews = await redis.incr("views:total")
   return NextResponse.json({ totalViews })
