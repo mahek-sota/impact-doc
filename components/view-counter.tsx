@@ -15,7 +15,11 @@ export function ViewCounter() {
     // Fire-and-forget POST to increment on first visit
     const hasVisited = sessionStorage.getItem("brag:visited")
     if (!hasVisited) {
-      fetch("/api/views", { method: "POST" })
+      fetch("/api/views", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ referrer: document.referrer || "direct" }),
+      })
         .then((r) => r.json())
         .then((newData) => {
           mutate(newData, false)
