@@ -1,6 +1,7 @@
 "use client"
 
 import { ThemeToggle } from "@/components/theme-toggle"
+import { ViewCounter } from "@/components/view-counter"
 import { Menu } from "lucide-react"
 
 const sectionLabels: Record<string, string> = {
@@ -36,6 +37,7 @@ export function DashboardHeader({ activeSection, onMenuToggle }: DashboardHeader
         </div>
       </div>
       <div className="flex items-center gap-3">
+        <ViewCounter />
         <a
           href="mailto:sotamahek@gmail.com"
           className="hidden rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 sm:inline-flex"
