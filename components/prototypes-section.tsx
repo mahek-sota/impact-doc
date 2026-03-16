@@ -44,6 +44,13 @@ const prototypes = [
     status: "Personal Project",
   },
   {
+    title: "DeFi Portfolio Tracker",
+    story:
+      "Tired of jumping between 5 tabs to check my crypto holdings. Built a dashboard that pulls wallet balances, token prices, and transaction history across chains via Web3.js and CoinGecko API. Tracks P&L, gas spent, and portfolio allocation in real time.",
+    tags: ["React", "Web3.js", "Node.js", "CoinGecko API", "PostgreSQL"],
+    status: "Personal Project",
+  },
+  {
     title: "Habit Tracker with Streaks",
     story:
       "Built this because every habit app I tried was either too complex or too forgettable. Went fully native with SwiftUI -- smooth animations, local notifications that actually fire at the right time, and CoreData for offline-first persistence. The streak analytics piece was the most fun: tracking longest streaks, completion rates, and weekly patterns using Swift Charts. Scratched my own itch and learned a ton about iOS lifecycle and notification scheduling in the process.",
