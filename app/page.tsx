@@ -35,7 +35,7 @@ const sectionTitles: Record<string, { title: string; subtitle: string }> = {
   },
   "reliable-ai": {
     title: "Building Reliable AI Systems",
-    subtitle: "Evaluation, verification, orchestration — what AI looks like past the demo.",
+    subtitle: "The pipelines, evals, and guardrails I've built behind the scenes.",
   },
   contact: {
     title: "Get in Touch",
