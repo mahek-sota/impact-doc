@@ -10,6 +10,8 @@ const sectionLabels: Record<string, string> = {
   extras: "Above & Beyond",
   prototypes: "Prototypes",
   projects: "Projects & Metrics",
+  "reliable-ai": "Reliable AI Systems",
+  contact: "Get in Touch",
 }
 
 interface DashboardHeaderProps {

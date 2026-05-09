@@ -12,6 +12,7 @@ import {
   Mail,
   ChevronLeft,
   ChevronRight,
+  ShieldCheck,
 } from "lucide-react"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
@@ -22,6 +23,7 @@ const navItems = [
   { id: "extras", label: "Above & Beyond", icon: Zap },
   { id: "prototypes", label: "Prototypes", icon: FlaskConical },
   { id: "projects", label: "Projects & Metrics", icon: FolderKanban },
+  { id: "reliable-ai", label: "Reliable AI Systems", icon: ShieldCheck },
   { id: "contact", label: "Get in Touch", icon: MessageCircle },
 ]
 
