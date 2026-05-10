@@ -13,6 +13,7 @@ import {
   ChevronDown,
   CircuitBoard,
   Database,
+  ExternalLink,
   Eye,
   FileSearch,
   GitBranch,
@@ -24,7 +25,9 @@ import {
   RefreshCw,
   Search,
   ShieldCheck,
+  SlidersHorizontal,
   Target,
+  Telescope,
   Workflow,
   XCircle,
   Zap,
@@ -954,6 +957,152 @@ export function ReliableAISection() {
                 <span className="text-[11px] text-muted-foreground">{s.k}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED INVESTIGATION */}
+      <section className="flex flex-col gap-5">
+        <div className="flex items-end justify-between gap-4">
+          <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-primary">
+              <Telescope className="h-3.5 w-3.5" />
+              Featured Investigation
+            </div>
+            <h2 className="text-lg font-semibold text-foreground">
+              Observability for Non-Deterministic Systems
+            </h2>
+          </div>
+          <span className="hidden font-mono text-[10px] uppercase tracking-widest text-muted-foreground sm:block">
+            deep-dive / external
+          </span>
+        </div>
+
+        <div className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:border-primary/40 hover:shadow-md">
+          {/* Cover banner */}
+          <div className="relative overflow-hidden border-b border-border">
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent" />
+            <img
+              src="/observability-cover.png"
+              alt="Observability for non-deterministic AI systems — engineering case study cover"
+              className="h-48 w-full object-cover sm:h-64 lg:h-72"
+              loading="lazy"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card to-transparent" />
+            <div className="absolute left-4 top-4 flex items-center gap-2 rounded-md border border-border/60 bg-background/70 px-2.5 py-1 backdrop-blur-md">
+              <span className="inline-flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+              <span className="font-mono text-[10px] uppercase tracking-widest text-foreground/90">
+                Case Study · Reliability & Observability
+              </span>
+            </div>
+          </div>
+
+          {/* Body */}
+          <div className="flex flex-col gap-6 p-6 sm:p-7">
+            <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-[15px]">
+              A systems-focused case study exploring reliability, evaluation, and behavioral
+              observability in LLM workflows. The work examines retrieval failures, prompt
+              regressions, evaluation pipelines, hallucination monitoring, and reliability
+              instrumentation for non-deterministic AI systems.
+            </p>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-1.5">
+              {[
+                "LLM Evaluation",
+                "AI Observability",
+                "RAG Systems",
+                "Reliability Engineering",
+                "Agentic Workflows",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-primary/25 bg-primary/5 px-2.5 py-0.5 text-[11px] font-medium text-primary/90 transition-colors hover:border-primary/50 hover:bg-primary/10"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <div className="h-px w-full bg-border" />
+
+            {/* Key Areas Explored */}
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center justify-between gap-4">
+                <h3 className="text-[11px] font-mono uppercase tracking-widest text-primary">
+                  Key Areas Explored
+                </h3>
+                <span className="hidden font-mono text-[10px] uppercase tracking-widest text-muted-foreground sm:block">
+                  04 / focus areas
+                </span>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  {
+                    icon: Activity,
+                    title: "Behavioral Observability",
+                    body:
+                      "Tracking hallucinations, grounding quality, semantic drift, and output consistency across AI workflows.",
+                  },
+                  {
+                    icon: SlidersHorizontal,
+                    title: "Prompt Regression Analysis",
+                    body:
+                      "Detecting silent quality degradation introduced by iterative prompt and workflow changes.",
+                  },
+                  {
+                    icon: Beaker,
+                    title: "Evaluation Pipelines",
+                    body:
+                      "Building structured evaluation systems for measuring reliability, consistency, and behavioral performance.",
+                  },
+                  {
+                    icon: Search,
+                    title: "Retrieval Failure Attribution",
+                    body:
+                      "Tracing hallucinated outputs back to retrieval contamination, OCR noise, and semantic overlap.",
+                  },
+                ].map((card) => (
+                  <div
+                    key={card.title}
+                    className="group/card relative flex flex-col gap-3 rounded-xl border border-border bg-background/40 p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-background/70 hover:shadow-[0_0_0_1px_var(--primary)]/0"
+                  >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover/card:bg-primary/15">
+                      <card.icon className="h-4 w-4" />
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                      <h4 className="text-sm font-semibold leading-tight text-foreground">
+                        {card.title}
+                      </h4>
+                      <p className="text-[11.5px] leading-relaxed text-muted-foreground">
+                        {card.body}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-col items-start justify-between gap-3 rounded-xl border border-dashed border-border bg-secondary/20 p-4 sm:flex-row sm:items-center sm:gap-4">
+              <div className="flex items-start gap-3">
+                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <p className="text-xs leading-relaxed text-muted-foreground">
+                  Full case study — architecture diagrams, evaluation traces, regression
+                  reports, and reliability instrumentation walkthroughs.
+                </p>
+              </div>
+              <a
+                href="https://warp-penalty-659.notion.site/ebd//23212a1dddb68028a709c3ac55f827d1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/cta inline-flex shrink-0 items-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-4 py-2 text-xs font-semibold text-primary transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-[0_0_0_3px] hover:shadow-primary/15"
+              >
+                <span>Read Full Case Study</span>
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/cta:translate-x-0.5" />
+                <ExternalLink className="h-3 w-3 opacity-60" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
