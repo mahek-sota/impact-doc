@@ -11,30 +11,6 @@ type Prototype = {
 
 const prototypes: Prototype[] = [
   {
-    title: "LLM-Driven Thesis Citation Review Pipeline",
-    story:
-      "Faculty were spending 30 minutes per thesis manually checking citations. I thought: what if I could get an LLM to do the grunt work? Built a pipeline with semantic analysis, regex heuristics, and Ollama verification. It now does in 2 minutes what used to take 30, with 95% precision. No paid APIs, no vendor lock-in.",
-    tags: ["LLM", "Ollama", "Semantic Analysis", "Python"],
-    status: "Shipped to Production",
-    github: "",
-  },
-  {
-    title: "Agentic RAG Search Assistant",
-    story:
-      "Our librarians and admins were buried in search queries that took forever to resolve manually. I prototyped an agentic RAG assistant with FAISS indexing and Ollama-based answer verification. 60% faster retrieval, 70% less manual review. It started as a weekend experiment and ended up in production.",
-    tags: ["FAISS", "RAG", "Ollama", "AI Agents"],
-    status: "Shipped to Production",
-    github: "",
-  },
-  {
-    title: "CI/CD Observability Dashboard",
-    story:
-      "Got tired of the \"did it deploy?\" Slack messages. Built a real-time dashboard that tracks pipeline status, container health, and resource usage. Prometheus + Grafana + alerting. Now the team can actually see what's happening instead of guessing.",
-    tags: ["React", "Spring Boot", "Prometheus", "Grafana", "Docker"],
-    status: "In Use",
-    github: "",
-  },
-  {
     title: "Modular Finance Tracking System",
     story:
       "Wanted to scratch my own itch -- track expenses properly without bloated apps. Architected a layered backend with modular services for tracking, reporting, and currency conversion with Redis caching for fast lookups. Clean separation of concerns, the way backends should be.",
@@ -121,8 +97,6 @@ const prototypes: Prototype[] = [
 ]
 
 const statusConfig: Record<string, { dot: string; bg: string; text: string }> = {
-  "Shipped to Production": { dot: "bg-primary", bg: "bg-primary/10", text: "text-primary" },
-  "In Use": { dot: "bg-chart-2", bg: "bg-chart-2/10", text: "text-chart-2" },
   "Personal Project": { dot: "bg-chart-4", bg: "bg-chart-4/10", text: "text-chart-4" },
 }
 

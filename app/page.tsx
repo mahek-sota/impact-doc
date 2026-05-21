@@ -7,6 +7,7 @@ import { OverviewSection } from "@/components/overview-section"
 import { ColleaguesSection } from "@/components/colleagues-section"
 import { ExtrasSection } from "@/components/extras-section"
 import { PrototypesSection } from "@/components/prototypes-section"
+import { WorkProjectsSection } from "@/components/work-projects-section"
 import { ProjectsSection } from "@/components/projects-section"
 import { ReliableAISection } from "@/components/reliable-ai-section"
 import { ContactSection } from "@/components/contact-section"
@@ -28,6 +29,10 @@ const sectionTitles: Record<string, { title: string; subtitle: string }> = {
   prototypes: {
     title: "Prototypes",
     subtitle: "Ideas I couldn't stop thinking about, so I built them.",
+  },
+  "work-projects": {
+    title: "Work Projects",
+    subtitle: "Production systems I shipped on the job, serving real users.",
   },
   projects: {
     title: "Projects & Metrics",
@@ -95,6 +100,7 @@ export default function Home() {
             {activeSection === "colleagues" && <ColleaguesSection />}
             {activeSection === "extras" && <ExtrasSection />}
             {activeSection === "prototypes" && <PrototypesSection />}
+            {activeSection === "work-projects" && <WorkProjectsSection />}
             {activeSection === "projects" && <ProjectsSection />}
             {activeSection === "reliable-ai" && <ReliableAISection />}
             {activeSection === "contact" && <ContactSection />}
