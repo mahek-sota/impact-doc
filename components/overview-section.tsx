@@ -29,9 +29,11 @@ export function OverviewSection() {
       {/* Bio Card */}
       <div className="rounded-xl border border-border bg-card p-6">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-3xl font-bold text-primary">
-            MS
-          </div>
+          <img
+            src="/mahek-sota.jpg"
+            alt="Mahek Sota"
+            className="h-16 w-16 shrink-0 rounded-2xl object-cover"
+          />
           <div className="flex flex-1 flex-col gap-3">
             <div>
               <h1 className="text-2xl font-bold tracking-tight text-foreground">
@@ -47,7 +49,7 @@ export function OverviewSection() {
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <MapPin className="h-3.5 w-3.5" />
-                Oxford, MS
+                San Francisco, CA
               </span>
               <span className="flex items-center gap-1.5">
                 <GraduationCap className="h-3.5 w-3.5" />

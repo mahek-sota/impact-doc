@@ -24,7 +24,7 @@ const prototypes: Prototype[] = [
       "Built this to explore what a collaborative workflow looks like when you do it right -- RESTful APIs, optimized PostgreSQL schemas, Redis caching, all containerized. Focused on handling concurrent users without things falling apart.",
     tags: ["Ruby on Rails", "React", "PostgreSQL", "Redis", "Docker"],
     status: "Personal Project",
-    github: "",
+    github: "https://github.com/mahek-sota/collaborative-resource-management-portal",
   },
   {
     title: "URL Shortener with Analytics",
