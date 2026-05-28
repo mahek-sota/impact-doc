@@ -7,9 +7,8 @@ import { Menu } from "lucide-react"
 const sectionLabels: Record<string, string> = {
   overview: "Overview",
   colleagues: "Helping Colleagues",
-  extras: "Above & Beyond",
   prototypes: "Prototypes",
-  projects: "Projects & Metrics",
+  work: "Work & Impact",
   "reliable-ai": "Reliable AI Systems",
   contact: "Get in Touch",
 }

@@ -3,10 +3,8 @@
 import {
   LayoutDashboard,
   Users,
-  Zap,
   FlaskConical,
   Briefcase,
-  FolderKanban,
   MessageCircle,
   Github,
   Linkedin,
@@ -21,10 +19,8 @@ import { cn } from "@/lib/utils"
 const navItems = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "colleagues", label: "Helping Colleagues", icon: Users },
-  { id: "extras", label: "Above & Beyond", icon: Zap },
+  { id: "work", label: "Work & Impact", icon: Briefcase },
   { id: "prototypes", label: "Prototypes", icon: FlaskConical },
-  { id: "work-projects", label: "Work Projects", icon: Briefcase },
-  { id: "projects", label: "Projects & Metrics", icon: FolderKanban },
   { id: "reliable-ai", label: "Reliable AI Systems", icon: ShieldCheck },
   { id: "contact", label: "Get in Touch", icon: MessageCircle },
 ]

@@ -5,10 +5,8 @@ import { DashboardSidebar } from "@/components/dashboard-sidebar"
 import { DashboardHeader } from "@/components/dashboard-header"
 import { OverviewSection } from "@/components/overview-section"
 import { ColleaguesSection } from "@/components/colleagues-section"
-import { ExtrasSection } from "@/components/extras-section"
 import { PrototypesSection } from "@/components/prototypes-section"
-import { WorkProjectsSection } from "@/components/work-projects-section"
-import { ProjectsSection } from "@/components/projects-section"
+import { WorkSection } from "@/components/work-section"
 import { ReliableAISection } from "@/components/reliable-ai-section"
 import { ContactSection } from "@/components/contact-section"
 import { cn } from "@/lib/utils"
@@ -22,21 +20,13 @@ const sectionTitles: Record<string, { title: string; subtitle: string }> = {
     title: "Helping Colleagues",
     subtitle: "The in-between work that never shows up on a Jira ticket.",
   },
-  extras: {
-    title: "Above & Beyond",
-    subtitle: "Things I built because I saw a gap and couldn't look away.",
-  },
   prototypes: {
     title: "Prototypes",
     subtitle: "Ideas I couldn't stop thinking about, so I built them.",
   },
-  "work-projects": {
-    title: "Work Projects",
-    subtitle: "Production systems I shipped on the job, serving real users.",
-  },
-  projects: {
-    title: "Projects & Metrics",
-    subtitle: "The numbers tell one story. The context tells a better one.",
+  work: {
+    title: "Work & Impact",
+    subtitle: "Shipped systems, self-initiated wins, and volunteer work, all in one place.",
   },
   "reliable-ai": {
     title: "Building Reliable AI Systems",
@@ -98,10 +88,8 @@ export default function Home() {
 
             {activeSection === "overview" && <OverviewSection />}
             {activeSection === "colleagues" && <ColleaguesSection />}
-            {activeSection === "extras" && <ExtrasSection />}
             {activeSection === "prototypes" && <PrototypesSection />}
-            {activeSection === "work-projects" && <WorkProjectsSection />}
-            {activeSection === "projects" && <ProjectsSection />}
+            {activeSection === "work" && <WorkSection />}
             {activeSection === "reliable-ai" && <ReliableAISection />}
             {activeSection === "contact" && <ContactSection />}
 

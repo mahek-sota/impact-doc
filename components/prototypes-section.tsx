@@ -48,7 +48,7 @@ const prototypes: Prototype[] = [
       "Built this because every habit app I tried was either too complex or too forgettable. Went fully native with SwiftUI -- smooth animations, local notifications that actually fire at the right time, and CoreData for offline-first persistence. The streak analytics piece was the most fun: tracking longest streaks, completion rates, and weekly patterns using Swift Charts. Scratched my own itch and learned a ton about iOS lifecycle and notification scheduling in the process.",
     tags: ["SwiftUI", "CoreData", "Swift", "Local Notifications", "Swift Charts"],
     status: "Personal Project",
-    github: "",
+    github: "https://github.com/mahek-sota/habit-tracker-with-streaks",
   },
   {
     title: "DevPersona — Developer Personality Quiz",
