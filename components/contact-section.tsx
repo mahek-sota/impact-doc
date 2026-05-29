@@ -1,6 +1,6 @@
 "use client"
 
-import { Linkedin, Mail, ArrowUpRight } from "lucide-react"
+import { Linkedin, Mail, ArrowUpRight, PenSquare } from "lucide-react"
 
 export function ContactSection() {
   return (
@@ -57,6 +57,29 @@ export function ContactSection() {
           </div>
           <span className="mt-auto text-xs font-medium text-primary">
             sotamahek@gmail.com
+          </span>
+        </a>
+
+        {/* Medium */}
+        <a
+          href="https://medium.com/@maheksota56"
+          target="_blank"
+          rel="noreferrer"
+          className="group relative flex flex-col gap-4 rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/40 hover:bg-primary/5"
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-foreground/10">
+              <PenSquare className="h-6 w-6 text-foreground" />
+            </div>
+            <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-foreground">
+              Medium
+            </h3>
+          </div>
+          <span className="mt-auto text-xs font-medium text-primary">
+            medium.com/@maheksota56
           </span>
         </a>
       </div>
