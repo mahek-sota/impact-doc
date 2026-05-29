@@ -16,7 +16,7 @@ const prototypes: Prototype[] = [
       "Wanted to scratch my own itch -- track expenses properly without bloated apps. Architected a layered backend with modular services for tracking, reporting, and currency conversion with Redis caching for fast lookups. Clean separation of concerns, the way backends should be.",
     tags: ["FastAPI", "PostgreSQL", "Redis", "Docker"],
     status: "Personal Project",
-    github: "",
+    github: "https://github.com/mahek-sota/modular-finance-tracking-system",
   },
   {
     title: "Collaborative Resource Management Portal",
@@ -40,7 +40,7 @@ const prototypes: Prototype[] = [
       "Tired of jumping between 5 tabs to check my crypto holdings. Built a dashboard that pulls wallet balances, token prices, and transaction history across chains via Web3.js and CoinGecko API. Tracks P&L, gas spent, and portfolio allocation in real time.",
     tags: ["React", "Web3.js", "Node.js", "CoinGecko API", "PostgreSQL"],
     status: "Personal Project",
-    github: "",
+    github: "https://github.com/mahek-sota/defi-portfolio-tracker",
   },
   {
     title: "Habit Tracker with Streaks",

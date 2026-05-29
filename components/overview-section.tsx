@@ -32,7 +32,7 @@ export function OverviewSection() {
           <img
             src="/mahek-sota.jpg"
             alt="Mahek Sota"
-            className="h-16 w-16 shrink-0 rounded-2xl object-cover"
+            className="h-36 w-36 shrink-0 rounded-2xl object-cover object-top sm:h-44 sm:w-44"
           />
           <div className="flex flex-1 flex-col gap-3">
             <div>
