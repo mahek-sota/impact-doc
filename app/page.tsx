@@ -34,7 +34,7 @@ const sectionTitles: Record<string, { title: string; subtitle: string }> = {
     subtitle: "The pipelines, evals, and guardrails I've built behind the scenes.",
   },
   writing: {
-    title: "Writing",
+    title: "Tech Blogs",
     subtitle: "Notes from things I debugged, broke, or argued about — explained from first principles.",
   },
   contact: {
