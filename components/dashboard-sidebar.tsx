@@ -6,6 +6,7 @@ import {
   FlaskConical,
   Briefcase,
   MessageCircle,
+  PenSquare,
   Github,
   Linkedin,
   Mail,
@@ -22,6 +23,7 @@ const navItems = [
   { id: "work", label: "Work & Impact", icon: Briefcase },
   { id: "prototypes", label: "Prototypes", icon: FlaskConical },
   { id: "reliable-ai", label: "Reliable AI Systems", icon: ShieldCheck },
+  { id: "writing", label: "Writing", icon: PenSquare },
   { id: "contact", label: "Get in Touch", icon: MessageCircle },
 ]
 

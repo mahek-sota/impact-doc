@@ -10,6 +10,7 @@ const sectionLabels: Record<string, string> = {
   prototypes: "Prototypes",
   work: "Work & Impact",
   "reliable-ai": "Reliable AI Systems",
+  writing: "Writing",
   contact: "Get in Touch",
 }
 

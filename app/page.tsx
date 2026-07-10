@@ -8,6 +8,7 @@ import { ColleaguesSection } from "@/components/colleagues-section"
 import { PrototypesSection } from "@/components/prototypes-section"
 import { WorkSection } from "@/components/work-section"
 import { ReliableAISection } from "@/components/reliable-ai-section"
+import { WritingSection } from "@/components/writing-section"
 import { ContactSection } from "@/components/contact-section"
 import { cn } from "@/lib/utils"
 
@@ -31,6 +32,10 @@ const sectionTitles: Record<string, { title: string; subtitle: string }> = {
   "reliable-ai": {
     title: "Building Reliable AI Systems",
     subtitle: "The pipelines, evals, and guardrails I've built behind the scenes.",
+  },
+  writing: {
+    title: "Writing",
+    subtitle: "Notes from things I debugged, broke, or argued about — explained from first principles.",
   },
   contact: {
     title: "Get in Touch",
@@ -91,6 +96,7 @@ export default function Home() {
             {activeSection === "prototypes" && <PrototypesSection />}
             {activeSection === "work" && <WorkSection />}
             {activeSection === "reliable-ai" && <ReliableAISection />}
+            {activeSection === "writing" && <WritingSection />}
             {activeSection === "contact" && <ContactSection />}
 
             {/* <footer className="mt-12 border-t border-border pt-6 text-xs text-muted-foreground">
