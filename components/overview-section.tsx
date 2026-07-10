@@ -44,7 +44,7 @@ export function OverviewSection() {
               </p>
             </div>
             <p className="max-w-2xl leading-relaxed text-muted-foreground">
-              I tend to build the things that aren’t on the roadmap yet, but quickly become necessary. My resume explains <span className="italic">what</span> I’ve shipped. This page shows you <span className="font-medium text-foreground">how I operate while shipping</span>, stepping into debugging threads early, improving systems that create friction, and making sure both people and infrastructure move forward.
+              Hi, I{"'"}m Mahek, a software engineer who enjoys building products from scratch and improving the ones that already exist. I naturally gravitate toward ambiguous problems, especially the kind that require equal parts engineering, product thinking, and curiosity. Most of my favorite work started as <span className="italic">&ldquo;while you{"'"}re in there&hellip;&rdquo;</span> The side quest becomes the main quest <span className="font-medium text-foreground">more often than you{"'"}d think</span>.
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
