@@ -77,6 +77,22 @@ const groups: Group[] = [
         deployed: true,
       },
       {
+        title: "Institutional Research & Open-Access Reporting Dashboards",
+        role: "Full Stack Engineer",
+        org: "University of Mississippi",
+        period: "Jul 2024 - Present",
+        story:
+          "Leadership and the research office needed a defensible, up-to-date picture of the university's entire scholarly footprint — publication output, citation impact, grant funding, and how much of it is openly accessible — but that data was scattered across OpenAlex and Dimensions with no unified view. I developed institutional research dashboards and open-access reporting workflows on top of both sources, tracking 44.5K+ publications, 2.9M+ citations, and $508M+ in tracked grant funding, while surfacing open-access coverage across 21.8K+ publications so the library and research office can report on and push toward open-access goals.",
+        metrics: [
+          { label: "Publications Tracked", value: "44.5K+" },
+          { label: "Citations", value: "2.9M+" },
+          { label: "Grant Funding", value: "$508M+" },
+          { label: "Open-Access Pubs", value: "21.8K+" },
+        ],
+        tags: ["Python", "OpenAlex", "Dimensions", "ETL", "React", "Data Visualization"],
+        deployed: true,
+      },
+      {
         title: "LLM-Driven Thesis Citation Review System",
         role: "Software Engineer - Backend & AI",
         org: "University of Mississippi",
