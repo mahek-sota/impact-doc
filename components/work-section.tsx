@@ -25,7 +25,8 @@ const groups: Group[] = [
   {
     id: "production",
     label: "Production",
-    blurb: "Systems shipped on the job, serving real users under real constraints.",
+    blurb:
+      "Systems built on the job under real constraints. Most are live and serving users; a few are built and waiting on data or rollout.",
     icon: Briefcase,
     projects: [
       {
@@ -77,6 +78,37 @@ const groups: Group[] = [
         deployed: true,
       },
       {
+        title: "Collection Value & Renewal Decision Tool",
+        role: "Full Stack Engineer",
+        org: "University of Mississippi",
+        period: "Jul 2024 - Present",
+        story:
+          "Usage reports say a journal was read. They can't say whether it's part of how research actually happens here — and both halves are needed to defend a renewal. This tool joins COUNTER usage, subscription invoices, and UM's own research output from OpenAlex into a per-journal Keep / Review / Negotiate / Cancel-candidate recommendation, with the evidence behind every call. Six signals — usage level, cost efficiency, UM authorship, UM citation, usage trend, and open-access substitutability — are each ranked as a percentile *within their own vendor*, because one global scale would mark an entire small publisher as cancellable for being small. The joined view changes answers: Physics Letters B records 78 uses on the platform and looks cancellable on usage alone, until you see UM authors published 22 papers in it and cited it 647 times. Because a weighted average shouldn't have the last word on decisions with consequences, guardrails outrank the score outright — never auto-cancel a journal UM authors publish in, never auto-cancel a top-decile title, always flag a high cost per use however well it scores. Seven-stage pandas pipeline, no server and no database, shipping a single self-contained HTML file you can share by sending the one file.",
+        metrics: [
+          { label: "Scoring Signals", value: "6" },
+          { label: "Decision Bands", value: "4" },
+          { label: "Ranking", value: "Within-Vendor" },
+          { label: "Output", value: "Single-File HTML" },
+        ],
+        tags: ["Python", "pandas", "COUNTER 5 / 5.1", "OpenAlex", "YAML Config", "Self-Contained HTML"],
+        deployed: true,
+      },
+      {
+        title: "ILL Acquisition-on-Demand",
+        role: "Full Stack Engineer",
+        org: "University of Mississippi",
+        period: "Jul 2024 - Present",
+        story:
+          "The collection-value tool answers \"what should we cancel?\" It structurally cannot answer the opposite question, because COUNTER only counts things we already license. That evidence lives in interlibrary loan: every borrowing request is a patron telling us, at some cost in staff time and several days of their own, that we don't have something they needed — already logged, and nothing reads it. This turns ILL borrowing into a subscribe / purchase / keep-borrowing call per title. The load-bearing computation is the CONTU Rule of Five: within one calendar year a library may receive five articles from the most recent five years of a periodical before royalties kick in. Getting it right means respecting three things a naive request count misses — the allotment is per journal per calendar year, only recent articles count against it, and order matters, so the sixth request *by date* is the one charged. Since it's a guideline rather than statute and local practice varies, the computation is reconciled against ILLiad's own copyright determination and the disagreement rate is reported on the page — a licence can clear an article the guidelines would charge for, and that gap should be explained before any royalty figure is quoted to anyone. It currently runs on synthetic ILLiad-shaped transactions so the analysis could be built and reviewed while the data request was pending, with a banner saying so on every page. The proposal and the data request are both generated from the schema code, so the ask and the implementation can't drift apart.",
+        metrics: [
+          { label: "Recommendation Classes", value: "5" },
+          { label: "Copyright Logic", value: "CONTU Rule of 5" },
+          { label: "Data Status", value: "Synthetic - Pending" },
+          { label: "Outputs", value: "HTML + 3 CSVs" },
+        ],
+        tags: ["Python", "ILLiad", "unittest", "YAML Config", "Self-Contained HTML"],
+      },
+      {
         title: "Institutional Research & Open-Access Reporting Dashboards",
         role: "Full Stack Engineer",
         org: "University of Mississippi",
@@ -91,6 +123,66 @@ const groups: Group[] = [
         ],
         tags: ["Python", "OpenAlex", "Dimensions", "ETL", "React", "Data Visualization"],
         deployed: true,
+      },
+      {
+        title: "AI Archive Image Description & Subject Cataloging",
+        role: "Software Engineer - AI",
+        org: "University of Mississippi",
+        period: "2025 - Present",
+        story:
+          "Archival photo collections arrive with thousands of images and almost no usable description. I built a pipeline that generates catalog-quality titles and descriptions with local Ollama vision models — fully on-machine, so no image or description ever leaves the building. The interesting problem wasn't generation, it was agreement: asking for a title and two descriptions in one response produces three texts that disagree about what the photograph even shows. So each stage runs chained, with the prior stage's output in front of the model, and each description is checked against its anchors as it's written — if it contradicts the title on posture, setting, or number of subjects, the stage is asked again with the specific disagreement quoted back, and the second answer is kept only if it agrees better. Two things I learned by measuring rather than guessing: small vision models copy concrete nouns straight out of the prompt (an example mentioning \"a pipe\" put a pipe in a subject's mouth), and prompt length costs compliance — a thorough per-clause checklist made things measurably worse, and halving the length is what produced the gain. Subject headings work the same way: the model is trusted only to name what it sees in plain words, which are then looked up at id.loc.gov across LCSH, TGM, and LCNAF, so it can never invent a heading that doesn't exist — worst case is a real-but-wrong heading a cataloger can reject.",
+        metrics: [
+          { label: "Title Disagreements", value: "11/15 -> 5/15" },
+          { label: "Detail Drops", value: "20 -> 9" },
+          { label: "Title Contradictions", value: "2 -> 0" },
+          { label: "Data Leaving Machine", value: "None" },
+        ],
+        tags: ["Python", "Ollama", "llama3.2-vision", "LCSH / TGM / LCNAF", "id.loc.gov", "Prompt Engineering"],
+      },
+      {
+        title: "Faculty Research Profile & Keyword Pipeline",
+        role: "Software Engineer - Backend & AI",
+        org: "University of Mississippi",
+        period: "Jul 2024 - Present",
+        story:
+          "Describing what a faculty member actually researches, from public metadata alone, is harder than it sounds — names collide, ORCIDs are half-adopted, and publication keywords are either missing or uselessly generic. Rather than commit to one approach, I built four competing methods against the same faculty roster and compared them: straight publication-keyword extraction from OpenAlex and ORCID; phrase mining with TF-IDF scoring and similarity ranking; clustering with Crossref enrichment and a review dashboard; and finally an embeddings-based pipeline with temporal trend analysis, cross-source dedupe and merge, preprint harvesting, and name-plus-affiliation discovery for faculty with no ORCID at all. Each round produced debug reports I could actually inspect, so method four is the one that survived on evidence rather than preference. The exported profiles feed a Next.js faculty profile page that renders publications, research interests, and metrics as a presentational layer over whatever the pipeline produces.",
+        metrics: [
+          { label: "Methods Compared", value: "4" },
+          { label: "Identity Sources", value: "3 APIs" },
+          { label: "Keywording", value: "Embeddings + TF-IDF" },
+          { label: "Output", value: "Per-Faculty Profiles" },
+        ],
+        tags: ["Python", "OpenAlex", "ORCID", "Crossref", "Embeddings", "Clustering", "Next.js"],
+      },
+      {
+        title: "Ole Miss Researcher Matchmaker",
+        role: "Full Stack Engineer",
+        org: "University of Mississippi",
+        period: "2025 - Present",
+        story:
+          "Assembling a research team, a grant group, or a dissertation committee across a campus this size is mostly word of mouth — you get the collaborators you already know about. This prototype turns it into a questionnaire: purpose, domain, methodologies, technical skills, department, seniority, keywords, team size. Every researcher is scored on transparent weights, and every card shows *why* it matched, because a match score nobody can explain is worse than no score. Repeated hits taper with diminishing returns so a broad query stays interpretable instead of crushing every percentage toward zero, and scoring and the ideal use the same curve so a perfect match still reads exactly 100%. Dissertation-committee mode filters out anyone ineligible to serve, labels members Chair / Member / Cognate, and enforces eligibility even against an explicit pin. The team builder seeds from pinned members, anchors on the top match, then greedily adds people who bring *new* methodology coverage — and reports what the team is missing (\"All senior — an early-career member would add capacity\"). 46 engine tests assert on relationships rather than exact point totals, so weights can be retuned safely but a broken normalization gets caught. Runs on a dummy roster with zero dependencies and no build step.",
+        metrics: [
+          { label: "Engine Tests", value: "46" },
+          { label: "Scoring Signals", value: "8" },
+          { label: "Dependencies", value: "0" },
+          { label: "Roster", value: "28 - Dummy Data" },
+        ],
+        tags: ["Node.js", "Vanilla JS", "Zero-Dependency", "Weighted Scoring", "Regression Tests"],
+      },
+      {
+        title: "Letters Anonymous",
+        role: "Full Stack Engineer",
+        org: "University of Mississippi",
+        period: "2025 - Present",
+        story:
+          "A wall of anonymous, kind notes for students — anyone can submit, and approved notes join a rotating wall of encouragement. The whole design question is moderation: an anonymous submission box on a campus is a liability unless someone reads every note, and nobody has time to. So moderation runs automatically, locally, and for free, in two stages behind a single entry point. First a rules pass rejects links, emails, phone numbers, profanity, spam, and a high-precision harassment / threat / self-harm phrase blocklist that catches the clean-worded cruelty a classifier misses — \"nobody will miss you\" has no toxic vocabulary in it. Then a local toxic-bert model via Transformers.js backstops confident overt toxicity. It fails closed: an error never auto-approves. No paid APIs, no human approval queue, no data leaving the university's own infrastructure. React and Vite frontend served from the same origin as the Express API, Postgres storage, on-prem deploy.",
+        metrics: [
+          { label: "Moderation", value: "2-Stage, Local" },
+          { label: "Human Approval", value: "None Needed" },
+          { label: "Paid APIs", value: "0" },
+          { label: "Failure Mode", value: "Fails Closed" },
+        ],
+        tags: ["React", "Vite", "Node.js", "Express", "PostgreSQL", "Transformers.js", "toxic-bert"],
       },
       {
         title: "LLM-Driven Thesis Citation Review System",
